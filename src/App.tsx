@@ -1,9 +1,8 @@
 
-function App() {
-
-  return (
-    <div>Teste</div>
-  )
+function App(){
+    return(
+        <div>Testando isso</div>
+    )
 }
 
-export default App
+export default App;
