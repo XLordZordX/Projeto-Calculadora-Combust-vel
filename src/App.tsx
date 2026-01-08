@@ -1,14 +1,6 @@
 import { useState } from "react"
+import logo from "./assets/logo.png"
 
-<<<<<<< HEAD
-function App(){
-    return(
-        <div>Testando isso</div>
-    )
-}
-
-export default App;
-=======
 function App() {
 
   return (
@@ -24,7 +16,7 @@ export default App
 function Interface(){
     return(
         <div>
-            <img src="src/assets/logo.png"/>
+            <img src={logo}/>
             <h2>Qual a melhor opção?</h2>
         </div>
     )
@@ -73,4 +65,3 @@ function Formulario(){
     )
 }
 
->>>>>>> pagin_layout
