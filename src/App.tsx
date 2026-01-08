@@ -24,21 +24,20 @@ function Interface(){
 function Formulario(){
     const [valorAlcool, setValorAlcool] = useState(0)
     const [valorGasolina, setValorGasolina] = useState(0)
+    const [result, setResult] = useState<boolean | null>(null)
     
-    let resultado="";
 
     function Calcular(){
-        let alcool = valorAlcool
-        let gasolina = valorGasolina
-
-        if(alcool<gasolina){
-            resultado = "Álcool" 
+        if(valorAlcool<valorGasolina){
+            setResult(true)
+        }else if (valorGasolina<valorAlcool){
+            setResult(false)
         }else{
-            resultado = "Gásolina"
+            setResult(null)
         }
     }
-    
 
+    
     return(
         <div>
             <label>Álcool (preço por litro):</label>
@@ -55,7 +54,11 @@ function Formulario(){
 
             <button onClick={Calcular}>Calcular</button>
         <div>
-            <h1>Compensa Mais:{resultado}</h1>
+        {result !== null && (
+        <h2>
+          {result ? 'Use Álcool!' : 'Use Gasolina!'}
+        </h2>
+      )}
         </div>
         </div>
     )
