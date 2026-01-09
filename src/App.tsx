@@ -1,10 +1,14 @@
 import { useState } from "react"
 import logo from "./assets/logo.png"
+<<<<<<< HEAD
+=======
+import "./index.css"
+>>>>>>> pagin_layout
 
 function App() {
 
   return (
-    <div>
+    <div className="central">
         <Interface/>
         <Formulario/>
     </div>
@@ -41,18 +45,22 @@ function Formulario(){
     
     return(
         <div>
+            <div className="Formu">
             <label>Álcool (preço por litro):</label>
             <input type="number"
             value={valorAlcool}
+            min={0}
             onChange={(e)=> setValorAlcool(Number(e.target.value))}
             ></input>
-
+            </div>
+            <div className="Formu">
             <label>Gasolina (preço por litro):</label>
             <input type="number"
             value={valorGasolina}
+            min={0}
             onChange={(e)=>setValorGasolina(Number(e.target.value))}
             ></input>
-
+            
             <button onClick={Calcular}>Calcular</button>
         <div>
         {result !== null && (
@@ -60,6 +68,7 @@ function Formulario(){
           {result ? 'Use Álcool!' : 'Use Gasolina!'}
         </h2>
       )}
+      </div>
         </div>
         </div>
     )
