@@ -1,0 +1,44 @@
+
+.central{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Formu{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+body{
+    background-color: rgba(58, 47, 47, 0.911);
+}
+
+label{
+    color: aqua;
+}
+
+input[type=number]{
+    margin-top: 10px;
+    width:300px;
+    height: 50px;
+    background-color: rgb(62, 173, 155);
+    color: white;
+    display: flex;
+}
+
+h2{
+    color: rgb(16, 228, 16);
+}
+
+button{
+    background-color: brown;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}
